@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.util.AttributeKey;
 
 @ChannelHandler.Sharable
 public class DiscardClientHander extends ChannelHandlerAdapter {
@@ -11,10 +12,15 @@ public class DiscardClientHander extends ChannelHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf respBuf = (ByteBuf) msg;
+
+        StringBuilder respBuilder = new StringBuilder();
         while (respBuf.isReadable()) {
-            System.out.print((char) respBuf.readByte());
-            System.out.flush();
+            respBuilder.append((char) respBuf.readByte());
         }
+
+        ctx.channel().attr(AttributeKey.valueOf(DiscardClient.CLIENT_KEY)).set(respBuilder.toString());
+        ctx.channel().close();
+        ctx.close();
 
     }
 

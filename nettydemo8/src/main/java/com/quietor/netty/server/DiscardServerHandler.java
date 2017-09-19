@@ -3,16 +3,20 @@ package com.quietor.netty.server;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.util.AttributeKey;
 
 public class DiscardServerHandler extends ChannelHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf buf = (ByteBuf) msg;
+
+        StringBuilder reqContent = new StringBuilder();
         while(buf.isReadable()) {
-            System.out.print((char) buf.readByte());
-            System.out.flush();
+            reqContent.append((char) buf.readByte());
         }
+
+        System.out.println(reqContent.toString());
 
         ByteBuf respBuf = ctx.alloc().buffer().writeBytes("hello netty client".getBytes("UTF-8"));
         ctx.writeAndFlush(respBuf);

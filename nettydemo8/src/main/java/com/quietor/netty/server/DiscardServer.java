@@ -9,6 +9,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 public class DiscardServer {
 
+    public static final String SERVER_KEY = "server_key";
     public static void main(String[] args) throws InterruptedException {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
