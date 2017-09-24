@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="nettydemo" />
+        <module name="nettydemo10" />
+        <module name="nettydemo8" />
+        <module name="nettydemo9" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="nettydemo" target="1.8" />
+      <module name="nettydemo10" target="1.8" />
+      <module name="nettydemo8" target="1.8" />
+      <module name="nettydemo9" target="1.8" />
+      <module name="nettystudy" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
