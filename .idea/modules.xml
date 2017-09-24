@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/nettydemo/nettydemo.iml" filepath="$PROJECT_DIR$/nettydemo/nettydemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nettydemo10/nettydemo10.iml" filepath="$PROJECT_DIR$/nettydemo10/nettydemo10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nettydemo8/nettydemo8.iml" filepath="$PROJECT_DIR$/nettydemo8/nettydemo8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nettydemo9/nettydemo9.iml" filepath="$PROJECT_DIR$/nettydemo9/nettydemo9.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/nettystudy.iml" filepath="$PROJECT_DIR$/.idea/nettystudy.iml" />
     </modules>
   </component>
