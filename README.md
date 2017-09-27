@@ -3,3 +3,4 @@ nettydemo是netty视频教程第7节代码内容<br>
 nettydemo8是netty视频教程第8节代码内容<br>
 nettydemo9是netty视频教程第9节代码内容<br>
 nettydemo10是netty视频教程第10节代码内容<br>
+nettydemo12是netty视频教程第12节代码内容，主要讲的是protobuffer相关的使用
